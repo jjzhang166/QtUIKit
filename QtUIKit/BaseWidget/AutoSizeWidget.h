@@ -45,6 +45,7 @@ protected:
     int m_Border;
     pressWindowsState m_State;
     CursorPos m_CursorPos;
+    AutoSizeMethod m_AutoSizeMethod;
     bool nativeEvent(const QByteArray &eventType, void *message, long *result);
 };
 

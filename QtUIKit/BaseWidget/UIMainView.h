@@ -13,7 +13,6 @@ protected:
      void paintEvent(QPaintEvent *event);
 private:
      inline bool getifDrawShadow();
-
      bool m_ifDrawShadow;
 signals:
 
