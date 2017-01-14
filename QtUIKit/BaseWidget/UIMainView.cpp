@@ -36,7 +36,7 @@ void UIMainView::paintEvent(QPaintEvent *event)
             QPainterPath path;
             path.setFillRule(Qt::WindingFill);
             path.addRect(9-i, 9-i, this->width()-(9-i)*2, this->height()-(9-i)*2);
-            color.setAlpha(150 - qSqrt(i)*50);
+            color.setAlpha(150 - qSqrt(i)*60);
             painter.setPen(color);
             painter.drawPath(path);
         }

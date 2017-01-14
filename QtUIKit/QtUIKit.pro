@@ -15,9 +15,11 @@ TEMPLATE = app
 SOURCES += main.cpp\
         CustomMainWidget.cpp \
     BaseWidget/AutoSizeWidget.cpp \
-    BaseWidget/UIMainView.cpp
+    BaseWidget/UIMainView.cpp \
+    BaseWidget/BaseMenu/BaseMenu.cpp
 
 HEADERS  += CustomMainWidget.h \
     BaseWidget/AutoSizeWidget.h \
     BaseWidget/ImportHeaderFile.h \
-    BaseWidget/UIMainView.h
+    BaseWidget/UIMainView.h \
+    BaseWidget/BaseMenu/BaseMenu.h

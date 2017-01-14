@@ -249,6 +249,15 @@ void AutoSizeWidget::mouseReleaseEvent(QMouseEvent *event)
         setCursor(Qt::ArrowCursor);
     }
 }
+
+void AutoSizeWidget::mouseDoubleClickEvent(QMouseEvent *event)
+{
+    if(m_AutoSizeMethod == CrossPlatform)
+    {
+        Q_UNUSED(event);
+        this->isMaximized() ? this->showNormal() : this->showMaximized();
+    }
+}
 bool AutoSizeWidget::nativeEvent(const QByteArray &eventType, void *message, long *result)
 {
     if(m_AutoSizeMethod == WinMessage)
@@ -312,6 +321,9 @@ bool AutoSizeWidget::nativeEvent(const QByteArray &eventType, void *message, lon
             return false;
             break;
         }
+    }else if(m_AutoSizeMethod == CrossPlatform)
+    {
+        return false;
     }
     return true;
 }
